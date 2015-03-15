@@ -1,0 +1,124 @@
+body {
+	background-color: white;
+	min-height: 100vh;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 10px 10px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+}
+
+.title a{
+  font-size: 23px;
+  margin-left: 40vw;
+  color: black !important;
+}
+
+.title a:hover{
+	color: #777 !important;
+}
+
+.profile-dropdown{
+	margin-left: 35vw;
+}
+
+/*    --------------------------------------------------
+	:: Login Section
+	-------------------------------------------------- */
+.login-logo{
+	width: 100px;
+	height: auto;
+	vertical-align: text-top;
+}
+
+.logo-name{
+	font-size: 100px;
+	display: inline;
+}
+
+#login {
+    padding-top: 200px
+}
+#login .form-wrap {
+    width: 30%;
+    margin: 0 auto;
+}
+#login h1 {
+    color: #1fa67b;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+#login .form-group {
+    margin-bottom: 25px;
+}
+#login .checkbox {
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#login .checkbox.show:before {
+    content: '\e013';
+    color: #1fa67b;
+    font-size: 17px;
+    margin: 1px 0 0 3px;
+    position: absolute;
+    pointer-events: none;
+    font-family: 'Glyphicons Halflings';
+}
+#login .checkbox .character-checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    display: inline-block;
+}
+#login .checkbox .label {
+    color: #6d6d6d;
+    font-size: 13px;
+    font-weight: normal;
+}
+#login .btn.btn-custom {
+    font-size: 14px;
+	margin-bottom: 20px;
+}
+#login .forget {
+    font-size: 13px;
+	text-align: center;
+	display: block;
+}
+
+/*    --------------------------------------------------
+	:: Inputs & Buttons
+	-------------------------------------------------- */
+.form-control {
+    color: #212121;
+}
+.btn-custom {
+    color: #fff;
+	background-color: #1fa67b;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+    color: #fff;
+}
