@@ -5,7 +5,7 @@ angular.module('app', [
 	'parse-angular.enhance',
 
 	/* models */
-	'hunews.models.Article',
+	// 'hunews.models.Article',
 
 	/* states */ 
 	// 'hunews.states.features', 
@@ -13,8 +13,8 @@ angular.module('app', [
 	// 'hunews.states.demo' , 
 	// 'hunews.states.about', 
 	
-	'hunews.directives.articleItem' /* an example directive */, 	
-	'hunews.directives.imageDrop' /* an example directive */, 	
+	// 'hunews.directives.articleItem' /* an example directive */, 	
+	// 'hunews.directives.imageDrop' /* an example directive */, 	
 	
 	'ParseServices' /* this is the Parse SDK */
 ])

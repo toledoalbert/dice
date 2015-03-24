@@ -40,23 +40,24 @@
 
     <div ng-controller="MainController">
 
-      <section id="login">
+      <section id="login" ng-hide="loggedIn">
         <div class="container">
           <div class="row">
               <div class="col-xs-12">
                   <div class="form-wrap">
                     <p class="logo-name"><img class="login-logo" src="img/dice.png"></img>Dice</p>
-                    <h1>Log in with your email account</h1>
+                    <h1>Log in with your student email</h1>
+                    <h1 class="error" ng-show="error">Please enter correct information</h1>
                         <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
                             <div class="form-group">
                                 <label for="email" class="sr-only">Email</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
+                                <input ng-model="loginEmail" type="email" name="email" id="email" class="form-control" placeholder="student.name@my.hamptonu.edu">
                             </div>
                             <div class="form-group">
                                 <label for="key" class="sr-only">Password</label>
-                                <input type="password" name="key" id="key" class="form-control" placeholder="Password">
+                                <input ng-model="loginPass" type="password" name="key" id="key" class="form-control" placeholder="Password">
                             </div>
-                            <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">
+                            <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in" ng-click="login(loginEmail, loginPass)">
                         </form>
                         <a href="" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
                         <hr>
@@ -82,7 +83,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-custom">Recovery</button>
+              <button type="button" class="btn btn-custom">Recover</button>
             </div>
           </div> <!-- /.modal-content -->
         </div> <!-- /.modal-dialog -->
@@ -100,11 +101,11 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">albert.toledo@my.hamptonu.edu<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Leaderboard</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a ng-click="navigate(1)" href="#">Home</a></li>
+                    <li><a ng-click="navigate(2)" href="#">Leaderboard</a></li>
+                    <li><a ng-click="navigate(3)" href="#">Profile</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">Log out</a></li>
+                    <li class="logout"><a href="#" ng-click="logout()">Log out</a></li>
                   </ul>
                 </li>
               </ul>
@@ -112,6 +113,18 @@
           </div>
         </div>
       </nav>
+
+      <div class="scene" ng-show="loggedIn">
+        <div id="home" ng-if="current == 1">
+          <h1>Home Scene will come here</h1>
+        </div>
+        <div id="leaderboard" ng-if="current == 2">
+          <h1>Leaderboard Scene will come here</h1>
+        </div>
+        <div id="profile" ng-if="current == 3">
+          <h1>Profile Scene will come here</h1>
+        </div>
+      </div>
 
     </div>
 
@@ -125,7 +138,11 @@
 
     <!-- Data Models -->
     <script src="app/services/ParseServices.js"></script>
-    <script src="app/data/Articles.js"></script>
+    <script src="app/data/User.js"></script>
+    <script src="app/data/Badge.js"></script>
+    <script src="app/data/Course.js"></script>
+    <script src="app/data/Questiosn.js"></script>
+    <script src="app/data/Avatar.js"></script>
 
     <!-- App core & templates -->
     <script src="app/app.js"></script>
