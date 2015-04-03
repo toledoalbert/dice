@@ -11,15 +11,34 @@ angular.module('app')
         Parse.User.logIn(email, pass, {
           success: function(user) {
             $scope.loggedIn = true;
+            $scope.userEmail=email;
           },
           error: function(user, error) {
             // The login failed. Check error to see why.
             $scope.error = true;
-            $scope.errorMessage = error;
+            $scope.errorMessage = error.message;
           }
         });
 
     };
+
+    $scope.signup = function(email, pass){
+        console.log("signing up");
+        var user = new Parse.User();
+        user.set("username", email);
+        user.set("email", email);
+        user.set("password", pass);
+        user.signUp(null, {
+            success: function(user){
+                $scope.login(user.get("email"),pass);
+            },
+            error:function(user,error){
+                $scope.error = true;
+                $scope.errorMessage = error.message;
+            }
+
+        })
+    }
 
     $scope.logout = function() {
         Parse.User.logOut();
