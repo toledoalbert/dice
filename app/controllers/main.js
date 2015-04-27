@@ -5,6 +5,7 @@ angular.module('app')
 
     $scope.loggedIn = (Parse.User.current());
     $scope.newQuestionWeek = 1;
+    $scope.newQuestionWeek = 1;
     $scope.newQuestionAnswer = 1;
     $scope.qJustAdded = false;
     $scope.currentWeek = 1;
@@ -33,6 +34,7 @@ angular.module('app')
 
         query.equalTo("week", $scope.currentWeek);
         query.equalTo("number", $scope.currentQuestionNumber);
+        query.descending("updatedAt");
 
         query.find({
 
