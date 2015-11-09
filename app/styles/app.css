@@ -197,6 +197,21 @@ input{
   /* -webkit-box-shadow: inset 0 -3px #9FE8EF; */
   /* box-shadow: inset 0 -3px #9FE8EF; */
 }
+.same-line input[type='checkbox']
+{
+    display:none;
+}
+
+.same-line label.checkbox
+{
+    display:inline-block;
+    font-size: 12.2pt;
+}
+
+.same-line input[type='checkbox']:checked + label.checkbox
+{
+    background-color: #FFBF00;
+}
 
 .btn-sm:active {
   top: 2px;

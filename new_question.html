@@ -1,17 +1,20 @@
 <form class="form-horizontal">
-<fieldset>
+<fieldset style="overflow: scroll; height: 75%; width: 90%; white-space: nowrap;">
 
 <!-- Form Name -->
-<legend>New Question</legend>
+<legend>New Question Form</legend>
 
 <!-- Textarea -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="question">New Question</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="question" name="question">Enter your question here.</textarea>
+    <textarea class="form-control" id="question" name="question" width: 30%;>Enter your question here.</textarea>
   </div>
 </div>
-
+<div>
+    <p></p>
+    <p2></p2>
+</div>
 <!-- Appended checkbox -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="appendedcheckbox"></label>
@@ -25,7 +28,10 @@
     
   </div>
 </div>
-
+<div>
+    <p></p>
+    <p2></p2>
+</div>
 <!-- Appended checkbox -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="appendedcheckbox"></label>
@@ -39,7 +45,10 @@
     
   </div>
 </div>
-
+<div>
+    <p></p>
+    <p2></p2>
+</div>
 <!-- Appended checkbox -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="appendedcheckbox"></label>
@@ -53,7 +62,10 @@
     
   </div>
 </div>
-
+<div>
+    <p></p>
+    <p2></p2>
+</div>
 <!-- Appended checkbox -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="appendedcheckbox"></label>
@@ -67,15 +79,21 @@
     
   </div>
 </div>
-
+<div>
+    <p></p>
+    <p2></p2>
+</div>
 <!-- Textarea -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="hint">Hint</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="hint" name="hint">Enter a hint for the question here.</textarea>
+      <textarea class="form-control" id="hint" name="hint" width: 20% >Enter a hint for the question here.</textarea>
   </div>
 </div>
-
+<div>
+    <p></p>
+    <p2></p2>
+</div>
 <!-- Multiple Radios (inline) -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="radios">Weeks</label>
@@ -122,14 +140,32 @@
     </label>
   </div>
 </div>
-
+<div>
+    <p></p>
+    <p2></p2>
+</div>
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="singlebutton"></label>
-  <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" class="btn btn-success">Submit</button>
+  <div class="col-md-4" >
+      <button id="singlebutton" name="singlebutton" class="btn btn-success" height: 10%; width: 10%; onSubmit="myFunction()"> Submit </button>
   </div>
 </div>
+<div>
+    <p></p>
+    <p2></p2>
+</div>
+
+<script>
+    function myFunction()
+    {
+        alert('You Have Successfully Submitted a Question! Thank You :) ');
+    }
+</script>
 
 </fieldset>
 </form>
+
+
+
+
